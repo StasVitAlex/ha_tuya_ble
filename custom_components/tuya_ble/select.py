@@ -368,7 +368,7 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
                     ),
                 ),
             ],
-            "ebd25eza4j1lgtuz": [  # Bluetooth Temperature Humidity Sensor
+            "hoqd9aka": [  # Bluetooth Temperature Humidity Sensor
                 TuyaBLESelectMapping(
                     dp_id=9,
                     description=TemperatureUnitDescription(
