@@ -368,6 +368,18 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
                     ),
                 ),
             ],
+            "ebd25eza4j1lgtuz": [  # Bluetooth Temperature Humidity Sensor
+                TuyaBLESelectMapping(
+                    dp_id=9,
+                    description=TemperatureUnitDescription(
+                        options=[
+                            UnitOfTemperature.CELSIUS,
+                            UnitOfTemperature.FAHRENHEIT,
+                        ],
+                        entity_registry_enabled_default=False,
+                    ),
+                ),
+            ]
         },
     ),
     "znhsb": TuyaBLECategorySelectMapping(
