@@ -477,7 +477,9 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                     ),
                 ),
             ],
-            "hoqd9aka": [  # Bluetooth Temperature Humidity Sensor
+            "hoqd9aka": [  # Evolution HTB1 Temperature Humidity Sensor
+                # Note: If entities show as unavailable, the DP IDs may be different.
+                # Common alternatives to try: (18, 19, 15) or (101, 102, 104)
                 TuyaBLETemperatureMapping(
                     dp_id=1,
                     coefficient=10.0,
@@ -491,8 +493,8 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                 TuyaBLESensorMapping(
                     dp_id=2,
                     description=SensorEntityDescription(
-                        key="va_moisture",
-                        device_class=SensorDeviceClass.MOISTURE,
+                        key="va_humidity",
+                        device_class=SensorDeviceClass.HUMIDITY,
                         native_unit_of_measurement=PERCENTAGE,
                         state_class=SensorStateClass.MEASUREMENT,
                     ),
