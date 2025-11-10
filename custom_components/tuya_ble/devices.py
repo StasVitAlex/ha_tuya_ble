@@ -531,7 +531,7 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
             "vlzqwckk": TuyaBLEProductInfo(
                 name="Temperature Humidity Sensor",
             ),
-            "ebd25eza4j1lgtuz": TuyaBLEProductInfo(
+            "hoqd9aka": TuyaBLEProductInfo(
                 name="Bluetooth Temperature Humidity Sensor",
             ),
         },
