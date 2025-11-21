@@ -755,9 +755,9 @@ class TuyaBLEDevice:
                     self._client = client
                     try:
                         await self._client.start_notify(
-                            CHARACTERISTIC_NOTIFY, self._notification_handler
+                            "00000002-0000-1001-8001-00805f9b07d0", self._notification_handler
                         )
-                    except:  # [BLEAK_EXCEPTIONS, BleakNotFoundError]:
+                    except Exception as ex:  # [BLEAK_EXCEPTIONS, BleakNotFoundError]:
                         self._client = None
                         _LOGGER.error(
                             "%s: starting notifications failed",
@@ -783,10 +783,11 @@ class TuyaBLEDevice:
                                 self.address,
                             )
                             continue
-                    except:  # [BLEAK_EXCEPTIONS, BleakNotFoundError]:
+                    except Exception as ex:  # [BLEAK_EXCEPTIONS, BleakNotFoundError]:
                         self._client = None
+                        a = str(ex)
                         _LOGGER.error(
-                            "%s: Sending device info request failed",
+                            "%s: Sending device info request failed" + str(ex),
                             self.address,
                             exc_info=True,
                         )
